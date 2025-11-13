@@ -1,0 +1,219 @@
+[
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Los Angeles Lakers",
+    "short_name": "Lakers",
+    "city": "Los Angeles",
+    "aliases": ["Lakers", "LA Lakers", "LAL", "Lake Show"],
+    "primary_color": "#552583"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Golden State Warriors",
+    "short_name": "Warriors",
+    "city": "San Francisco",
+    "aliases": ["Warriors", "GSW", "Dubs"],
+    "primary_color": "#1D428A"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Boston Celtics",
+    "short_name": "Celtics",
+    "city": "Boston",
+    "aliases": ["Celtics", "BOS", "C's"],
+    "primary_color": "#007A33"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Denver Nuggets",
+    "short_name": "Nuggets",
+    "city": "Denver",
+    "aliases": ["Nuggets", "DEN", "Nugs"],
+    "primary_color": "#0E2240"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Dallas Mavericks",
+    "short_name": "Mavericks",
+    "city": "Dallas",
+    "aliases": ["Mavs", "Mavericks", "DAL"],
+    "primary_color": "#00538C"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Milwaukee Bucks",
+    "short_name": "Bucks",
+    "city": "Milwaukee",
+    "aliases": ["Bucks", "MIL"],
+    "primary_color": "#00471B"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Phoenix Suns",
+    "short_name": "Suns",
+    "city": "Phoenix",
+    "aliases": ["Suns", "PHX"],
+    "primary_color": "#1D1160"
+  },
+  {
+    "type": "team",
+    "league": "NBA",
+    "name": "Miami Heat",
+    "short_name": "Heat",
+    "city": "Miami",
+    "aliases": ["Heat", "MIA"],
+    "primary_color": "#98002E"
+  },
+
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "F",
+    "number": 23,
+    "aliases": ["LeBron", "Bron", "King James", "LBJ", "GOAT"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Anthony Davis",
+    "team": "Los Angeles Lakers",
+    "position": "F-C",
+    "number": 3,
+    "aliases": ["Anthony Davis", "AD", "A.D."]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "G",
+    "number": 30,
+    "aliases": ["Steph", "Steph Curry", "Curry", "Chef Curry", "Chef"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Klay Thompson",
+    "team": "Golden State Warriors",
+    "position": "G",
+    "number": 11,
+    "aliases": ["Klay", "Klay Thompson", "Game 6 Klay"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Jayson Tatum",
+    "team": "Boston Celtics",
+    "position": "F",
+    "number": 0,
+    "aliases": ["Tatum", "JT", "Jayson Tatum"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Jaylen Brown",
+    "team": "Boston Celtics",
+    "position": "G-F",
+    "number": 7,
+    "aliases": ["Jaylen", "Jaylen Brown", "JB"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "number": 15,
+    "aliases": ["Jokic", "The Joker", "Jokić", "Big Honey"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Jamal Murray",
+    "team": "Denver Nuggets",
+    "position": "G",
+    "number": 27,
+    "aliases": ["Murray", "Jamal Murray", "Playoff Murray", "Bubble Murray"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Luka Dončić",
+    "team": "Dallas Mavericks",
+    "position": "G",
+    "number": 77,
+    "aliases": ["Luka", "Luka Doncic", "Luka Dončić", "Luka Magic"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Kyrie Irving",
+    "team": "Dallas Mavericks",
+    "position": "G",
+    "number": 11,
+    "aliases": ["Kyrie", "Kyrie Irving", "Uncle Drew"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "F",
+    "number": 34,
+    "aliases": ["Giannis", "Greek Freak", "GA", "Antetokounmpo"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "G",
+    "number": 0,
+    "aliases": ["Dame", "Dame Lillard", "Damian Lillard", "Dame Time"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "F",
+    "number": 35,
+    "aliases": ["KD", "Durant", "Kevin Durant", "Slim Reaper", "Easy Money Sniper"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Devin Booker",
+    "team": "Phoenix Suns",
+    "position": "G",
+    "number": 1,
+    "aliases": ["Book", "Booker", "Devin Booker", "D-Book"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Jimmy Butler",
+    "team": "Miami Heat",
+    "position": "F",
+    "number": 22,
+    "aliases": ["Jimmy", "Jimmy Butler", "Playoff Jimmy", "Himmy"]
+  },
+  {
+    "type": "player",
+    "league": "NBA",
+    "name": "Bam Adebayo",
+    "team": "Miami Heat",
+    "position": "C",
+    "number": 13,
+    "aliases": ["Bam", "Bam Adebayo"]
+  }
+]

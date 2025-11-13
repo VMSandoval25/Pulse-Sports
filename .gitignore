@@ -1,0 +1,118 @@
+# ---------------------------
+# GLOBAL IGNORES FOR MONOREPO
+# ---------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+
+# ---------------------------
+# PYTHON BACKEND (wnba-pulse-api)
+# ---------------------------
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+wnba-pulse-api/.venv/
+wnba-pulse-api/venv/
+venv/
+
+# Bytecode / compiled
+*.so
+
+# Migrations cache
+wnba-pulse-api/migrations/__pycache__/
+
+# Versioning
+wnba-pulse-api/migrations/versions/
+
+
+# SQLite (if used)
+*.sqlite3
+
+# Build artifacts
+wnba-pulse-api/dist/
+wnba-pulse-api/build/
+wnba-pulse-api/*.egg-info/
+
+
+# ---------------------------
+# WEB FRONTEND (wnba-pulse-web)
+# ---------------------------
+
+# Node_modules
+wnba-pulse-web/node_modules/
+
+# Next.js or React build dirs
+wnba-pulse-web/.next/
+wnba-pulse-web/out/
+wnba-pulse-web/build/
+wnba-pulse-web/dist/
+
+# Temporary dev files
+wnba-pulse-web/.npm/
+wnba-pulse-web/.pnpm-store/
+wnba-pulse-web/.parcel-cache/
+
+# Local env
+wnba-pulse-web/.env
+wnba-pulse-web/.env.local
+wnba-pulse-web/.env.*
+
+
+# ---------------------------
+# DOCKER / DATABASE
+# ---------------------------
+pgdata/
+docker-data/
+
+# Docker composition files overrides
+docker-compose.override.yml
+
+# Package Lock 
+wnba-pulse-web/package-lock.json
+
+
+# ---------------------------
+# OUTPUT FILES / ARTIFACTS
+# ---------------------------
+
+# Zips, PDFs, archvies
+*.zip
+*.tar.gz
+*.pdf
+
+# Coverage
+.coverage
+htmlcov/
+coverage/
+wnba-pulse-api/.coverage
+
+
+# ---------------------------
+# OS TRASH
+# ---------------------------
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
