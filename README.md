@@ -169,6 +169,10 @@ wnba-pulse-web/
   package.json
 ```
 
+# Early Database Design
+![Database, Pulse Database](/assets/database.png)
+
+
 # How to Run 
 ```text
 docker compose -f wnba-pulse-api/infra/docker-compose.yml up -d

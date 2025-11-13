@@ -11,3 +11,6 @@ from .post_discussion_metrics import PostDiscussionMetrics
 from .daily_aggregate import DailyAggregate
 from .daily_summary import DailySummary
 from .mixins import SocialFieldsMixin
+from .comment_entity import CommentEntity
+from .post_entity import PostEntity
+from .entity import Entity
