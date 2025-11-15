@@ -3,6 +3,7 @@
 Minimal Next.js app to render `/daily` from the API.
 
 ## Quickstart
+
 ```bash
 # set API URL
 echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
