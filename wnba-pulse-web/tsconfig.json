@@ -28,10 +28,9 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/*.css",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "postcss.config.js"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
