@@ -70,6 +70,12 @@ run-reddit-comments:
 	    && echo "🔁 Retrying reddit_comments..." \
 	    && python -m app.etl.reddit_comments)
 
+run-nlp-comments:
+	python -m app.etl.nlp
+
+run-aggregate-posts:
+	python -m app.etl.aggregate
+
 dev-etl-sample: run-reddit-ingest run-reddit-comments
 
 # -------------------------
@@ -81,3 +87,5 @@ dev-up: infra-up db-migrate dev-bootstrap
 
 # Nuke everything, recreate infra, migrate, seed, and run sample ETL.
 dev-reset: infra-reset db-migrate dev-bootstrap  dev-etl-sample
+
+

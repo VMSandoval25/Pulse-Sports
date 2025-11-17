@@ -8,12 +8,45 @@ from app.models.source import Source
 from app.models.channel import Channel
 from app.models.post import Post
 
-SUBREDDITS = ["NBA"]  # change to ["nba"] or a list of team subs if you want NBA
+"""
+reddit_ingest.py
+----------------
 
+Purpose:
+    Fetches POSTS (threads) from Reddit for a specific subreddit (e.g., NBA, WNBA)
+    using the PRAW API. This script ingests only top-level posts — not comments.
+
+What it does:
+    • Connects to Reddit using PRAW
+    • Pulls posts from subreddit.hot() / .new() / .top()
+    • Extracts metadata such as:
+        - external_id (Reddit post ID)
+        - title
+        - selftext/body
+        - score
+        - number of comments (count only)
+        - author
+        - permalink / URL
+        - created_at timestamp
+    • Inserts new posts into the `posts` table
+    • Ensures no duplicates (via external_id + source_id unique constraint)
+
+When to run:
+    • At the start of each ETL cycle
+    • Hourly during the season
+    • Before fetching comments
+    • Anytime you want fresh subreddit threads
+
+Dependencies:
+    • Requires the `sources` table to already contain "reddit"
+    • Populates only the `posts` table
+
+Notes:
+    This script does NOT fetch comments. Use `reddit_comments.py` afterward.
 """
-This grabs posts from reddit and populates my database tables: Source (ie Reddit), 
-Channel (User who posted), Post
-"""
+
+
+SUBREDDITS = ["NBA"]  # change to ["nba"] or a list of team subs if you want NBA
 
 def client():
     return praw.Reddit(
@@ -57,7 +90,7 @@ def fetch_posts_from_subreddit(reddit, sub_name: str, limit=50):
             "body": (getattr(s, "selftext", None) or None),
             "canonical_url": f"https://www.reddit.com{s.permalink}",
             "author": str(s.author) if s.author else None,
-            "score": int(s.score),
+            "score": int(s.score), #upvotes vs downvoates
             "comment_count": int(getattr(s, "num_comments", 0)),
             "created_at": datetime.fromtimestamp(s.created_utc, tz=timezone.utc),
             "raw_payload": {"permalink": s.permalink, "subreddit": str(s.subreddit)},

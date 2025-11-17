@@ -5,6 +5,46 @@ from app.core.db import SessionLocal
 from app.core.config import REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT
 from app.models import *
 
+"""
+reddit_comments.py
+-------------------
+
+Purpose:
+    Fetches COMMENTS for posts previously ingested by `reddit_ingest.py`.
+    This script loads replies under each Reddit post and stores them in the `comments` table.
+
+What it does:
+    • Iterates over posts already stored in the database
+    • Uses PRAW to load all comments for each post
+    • Handles nested replies (comment trees)
+    • Extracts metadata such as:
+        - external_id (Reddit comment ID)
+        - parent_comment_id (for threading)
+        - post_id (link to posts table)
+        - body text
+        - author
+        - score
+        - created_at timestamp
+        - depth (0 = top-level comment, 1+ for nested replies)
+    • Inserts new comments into the `comments` table
+    • Avoids duplicates via (post_id, external_id) uniqueness
+
+When to run:
+    • Immediately after `reddit_ingest.py`
+    • Every few minutes to get new comments during active threads
+    • Prior to running NLP sentiment analysis
+    • Anytime comments need to be updated independently from posts
+
+Dependencies:
+    • Requires posts to already exist in the `posts` table
+    • Populates only the `comments` table
+
+Notes:
+    This script does NOT fetch posts. It fetches comments ONLY.
+    Paired with `reddit_ingest.py`, they form the complete Reddit ingestion pipeline.
+"""
+
+
 def client():
     return praw.Reddit(
         client_id=REDDIT_CLIENT_ID,

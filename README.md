@@ -170,7 +170,7 @@ wnba-pulse-web/
 ```
 
 # Early Database Design
-![Database, Pulse Database](/assets/database.png)
+![Database, Pulse Database](/documents/database_design.png)
 
 
 # How to Run 

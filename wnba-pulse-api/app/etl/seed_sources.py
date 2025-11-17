@@ -2,6 +2,10 @@ from sqlalchemy import select
 from app.core.db import SessionLocal
 from app.models import *
 
+"""
+Temporary, populates sources table with entries 
+"""
+
 def main():
     db = SessionLocal()
     try:

@@ -5,6 +5,12 @@ from sqlalchemy import select
 from app.core.db import SessionLocal
 from app.models.entity import Entity
 
+"""
+seed_entities.py
+-----------------
+Temporary, populates entity table with static information
+
+"""
 def run(path: str = "./seed/entities_nba.json"):
     data = json.loads(Path(path).read_text())
     db = SessionLocal()
