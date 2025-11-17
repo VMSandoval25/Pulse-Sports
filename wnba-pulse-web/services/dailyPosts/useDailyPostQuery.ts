@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getDailyPostRequest } from "./getDailyPosts";
 
-export function useDailyPostRequest() {
+export function useDailyPostQuery() {
   return useQuery({
     queryKey: ["daily-post"],
     queryFn: getDailyPostRequest,

@@ -1,10 +1,10 @@
 "use client";
 
-import { useDailyPostRequest } from "services/dailyPosts/useDailyPostQuery";
+import { useDailyPostQuery } from "services/dailyPosts/useDailyPostQuery";
 
 
 export default function HomePage() {
-  const { data, isLoading, error } = useDailyPostRequest();
+  const { data, isLoading, error } = useDailyPostQuery();
 
   console.log(data);
 
